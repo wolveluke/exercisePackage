@@ -12,7 +12,7 @@
 #' @export
 #'
 #' @examples weather_munich_plot_3m(forecast_days = 14, past_days = 0)
-weather_munich_plot_3m <- function(forecast_days = 14, past_days = 0){
+weather_munich_plot_temp3m <- function(forecast_days = 14, past_days = 0){
 
   weather_data <- weather_munich_get(forecast_days, past_days)
 
