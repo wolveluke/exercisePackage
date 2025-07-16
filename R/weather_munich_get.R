@@ -12,6 +12,12 @@
 #' @examples
 #' weather_munich_get(forecast_days = 7, past_days = 0)
 
+
+# the limitation of 82 days is because null values are returned for me if I go over that.
+# There is probably a way of handling that exception to return NA in the tibble
+# instead of the whole function breaking, but once again, since functionality isn't the focus of this exercise
+# I don't think that would be a good use of my time
+
 # allows user to enter which days data should be returned for
 weather_munich_get <- function(forecast_days = 7, past_days = 0){
   # defines response object using the query function and req_perform

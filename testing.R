@@ -41,19 +41,21 @@ weather_plot <- weather_data |>
   tidyr::pivot_longer(cols = c(temp_max_C, temp_min_C, temp_mean_C),
                                  names_to = "temp_type",
                                  values_to = "temp_value") |>
-  ggplot2::ggplot(aes(x = as.Date(time),
-                      y = temp_value,
-                      color = temp_type)) +
+  ggplot2::ggplot(mapping = aes(x = as.Date(time),
+                                y = temp_value,
+                                color = temp_type)) +
   ggplot2::geom_line() +
   ggplot2::geom_point() +
   ggplot2::labs(title = "Recorded and Projected Temperatures on the Requested Days",
-       subtitle = "in °C by minimum, mean and maximum",
+       subtitle = "in Degrees C by minimum, mean and maximum",
        x = "Date",
-       y = "Temperature in °C") +
+       y = "Temperature in Degrees C") +
   ggplot2::scale_color_discrete(name = "Temperature Type",
                        labels = c("Maximum Temperature",
                                   "Mean Temperature",
                                   "Minimum Temperature"))
+weather_munich_plot_3m()
+
 
 
 
