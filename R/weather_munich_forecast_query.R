@@ -4,12 +4,13 @@
 #' @param past_days
 #'
 #' @returns
+#' @keywords internal
 #' @export
 #'
 #' @examples
 weather_munich_forecast_query <- function(forecast_days = 14, past_days = 0){
-forecast_request <- httr2:request("https://api.open-meteo.com/v1/forecast") |>
-  httr2:req_url_query(
+forecast_request <- httr2::request("https://api.open-meteo.com/v1/forecast") |>
+  httr2::req_url_query(
     latitude = 48.1374,
     longitude = 11.5755,
     daily = c("temperature_2m_max", "temperature_2m_min", "precipitation_sum", "temperature_2m_mean", "sunshine_duration"),

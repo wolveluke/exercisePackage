@@ -24,4 +24,4 @@ extracted_data <- tibble(
 )
 
 
-
+test_data <- weather_munich_data()
