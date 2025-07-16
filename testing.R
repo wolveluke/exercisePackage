@@ -54,8 +54,27 @@ weather_plot <- weather_data |>
                        labels = c("Maximum Temperature",
                                   "Mean Temperature",
                                   "Minimum Temperature"))
-weather_munich_plot_3m()
+weather_munich_plot_temp3m()
 
 
+write.csv(test_data, file="weather_data.csv")
 
+ggplot(test_data, aes(x = as.Date(time), y = sunshine_duration/3600)) +
+  geom_col(fill = "goldenrod") +
+  labs(
+    title = "Daily Sunshine Duration in Munich",
+    x = "Date",
+    y = "Sunshine Duration (hours)"
+  ) +
+  theme_minimal()
+
+ggplot(test_data, aes(x = as.Date(time), y = rain_sum)) +
+  geom_col(fill = "skyblue") +
+  labs(
+    title = "Daily Rainfall in Munich",
+    x = "Date",
+    y = "Rainfall (mm)"
+  ) +
+  theme_minimal()
+library(ggplot2)
 

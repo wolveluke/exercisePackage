@@ -11,7 +11,7 @@
 #' @returns A ggplot2 plot object
 #' @export
 #'
-#' @examples weather_munich_plot_3m(forecast_days = 14, past_days = 0)
+#' @examples weather_munich_plot_temp3m(forecast_days = 14, past_days = 0)
 weather_munich_plot_temp3m <- function(forecast_days = 14, past_days = 0){
 
   weather_data <- weather_munich_get(forecast_days, past_days)
@@ -25,13 +25,14 @@ weather_munich_plot_temp3m <- function(forecast_days = 14, past_days = 0){
                                   color = temp_type)) +
     ggplot2::geom_line() +
     ggplot2::geom_point() +
-    ggplot2::labs(title = "Recorded and Projected Temperatures on the Requested Days",
+    ggplot2::labs(title = "Recorded and Projected Temperatures on the Requested Days in Munich",
                   subtitle = "in Degrees C by minimum, mean and maximum",
                   x = "Date",
                   y = "Temperature in Degrees C") +
     ggplot2::scale_color_discrete(name = "Temperature Type",
                                   labels = c("Maximum Temperature",
                                              "Mean Temperature",
-                                             "Minimum Temperature"))
+                                             "Minimum Temperature")) +
+    ggplot2::theme_minimal()
 return(weather_3m_plot)
 }
