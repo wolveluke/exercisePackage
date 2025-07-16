@@ -4,6 +4,7 @@
 #' Function that returns a ggplot2 plot visualizing the daily minimum, maximum and
 #' mean temperatures for the requested days. Can be modified further using "+" in the usual
 #' ggplot2 fashion, if needed.
+#' <a href="https://open-meteo.com/">Weather data by Open-Meteo.com</a>
 #'
 #' @param forecast_days A number between 0 and 16
 #' @param past_days A number between 0 and 82
@@ -28,7 +29,8 @@ weather_munich_plot_temp3m <- function(forecast_days = 14, past_days = 0){
     ggplot2::labs(title = "Recorded and Projected Temperatures on the Requested Days in Munich",
                   subtitle = "in Degrees C by minimum, mean and maximum",
                   x = "Date",
-                  y = "Temperature in Degrees C") +
+                  y = "Temperature in Degrees C",
+                  caption = "Weather data by Open-Meteo.com") +
     ggplot2::scale_color_discrete(name = "Temperature Type",
                                   labels = c("Maximum Temperature",
                                              "Mean Temperature",

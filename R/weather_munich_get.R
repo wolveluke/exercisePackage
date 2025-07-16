@@ -1,7 +1,7 @@
 #' Get Munich weather forecast data as tibble
 #' @description
 #' Queries the Open-Meteo.com API for Munich and returns daily weather data for selected number of days in the past and in the future as a tibble.
-#'
+#' <a href="https://open-meteo.com/">Weather data by Open-Meteo.com</a>
 #'
 #' @param forecast_days A number between 0 and 16
 #' @param past_days A number between 0 and 82

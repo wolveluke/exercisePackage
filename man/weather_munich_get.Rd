@@ -16,6 +16,7 @@ A tibble
 }
 \description{
 Queries the Open-Meteo.com API for Munich and returns daily weather data for selected number of days in the past and in the future as a tibble.
+\if{html}{\out{<a href="https://open-meteo.com/">}}Weather data by Open-Meteo.com\if{html}{\out{</a>}}
 }
 \examples{
 weather_munich_get(forecast_days = 7, past_days = 0)

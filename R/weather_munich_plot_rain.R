@@ -3,6 +3,7 @@
 #' @description
 #' Function that returns a ggplot2 plot visualizing the daily precipitation sum for the requested days.
 #' Can be modified further using "+" in the usual ggplot2 fashion, if needed.
+#' <a href="https://open-meteo.com/">Weather data by Open-Meteo.com</a>
 #'
 #' @param forecast_days A number between 0 and 16
 #' @param past_days A number between 0 and 82
@@ -22,7 +23,8 @@ weather_munich_plot_rain <- function(forecast_days = 14, past_days = 0){
     ggplot2::labs(
       title = "Daily Rainfall in Munich",
       x = "Date",
-      y = "Rainfall (mm)"
+      y = "Rainfall (mm)",
+      caption = "Weather data by Open-Meteo.com"
     ) +
     ggplot2::theme_minimal()
 

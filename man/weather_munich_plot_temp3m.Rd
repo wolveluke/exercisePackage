@@ -18,6 +18,7 @@ A ggplot2 plot object
 Function that returns a ggplot2 plot visualizing the daily minimum, maximum and
 mean temperatures for the requested days. Can be modified further using "+" in the usual
 ggplot2 fashion, if needed.
+\if{html}{\out{<a href="https://open-meteo.com/">}}Weather data by Open-Meteo.com\if{html}{\out{</a>}}
 }
 \examples{
 weather_munich_plot_temp3m(forecast_days = 14, past_days = 0)
