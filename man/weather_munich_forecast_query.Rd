@@ -2,14 +2,15 @@
 % Please edit documentation in R/weather_munich_forecast_query.R
 \name{weather_munich_forecast_query}
 \alias{weather_munich_forecast_query}
-\title{Title}
+\title{Constructs the query for the API}
 \usage{
-weather_munich_forecast_query(forecast_days = 14, past_days = 0)
-}
-\arguments{
-\item{past_days}{}
+weather_munich_forecast_query(forecast_days = 7, past_days = 0)
 }
 \description{
-Title
+This function constructs the query that is used by the weather_munich_get function.
+As it is, the parameters are very restrictive for simplicity, but it could be changed to be a
+wrapper for the Open-Meteo.com API in R. Then again such a package probably already exists and
+since functionality isn't the focus of this exercise I am content with this. Also as this is an internal
+function not meant to be used directly, the standards for documentation have clearly been disregarded...
 }
 \keyword{internal}
